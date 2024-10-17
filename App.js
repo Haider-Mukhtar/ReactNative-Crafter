@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { Component, useState } from 'react'
 import MyFatherComponent from './components/MyFatherComponent';
 
@@ -24,17 +24,20 @@ const App = () => {
     setFname("Mukhtar")
   }
 
+  // textinput
+  const [something, setSomething] = useState();
+
   return (
     <View>
 
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>hello react native app.</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{framework}</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{email}</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{age}</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{name()}</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{100 + 20}</Text>
-      <Text style={{ fontSize: 30, fontStyle: 'italic' }}>{100 * 20}</Text>
-      <Text style={{ fontSize: 30 }}>{age == 20 ? "Age is above 20" : "Age unknow"}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>hello react native app.</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{framework}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{email}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{age}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{name()}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{100 + 20}</Text>
+      <Text style={{ fontSize: 20, fontStyle: 'italic' }}>{100 * 20}</Text>
+      <Text style={{ fontSize: 20 }}>{age == 20 ? "Age is above 20" : "Age unknow"}</Text>
 
       {/* Components */}
       <MyComponent />
@@ -50,6 +53,18 @@ const App = () => {
       {/* state */}
       <Text style={{ fontSize: 20 , color:'black'}}>My Name is {fname}.</Text>
       <Button title="Update Name" onPress={updateName}></Button>
+
+      {/* TextINput */}
+      <TextInput 
+        placeholder='Enter something'
+        style={{borderWidth:2, borderColor:'red', margin:10, padding:10, fontSize:20}}
+        value={something}
+        onChangeText={(txt)=>setSomething(txt)}
+      />
+      <Text style={{ fontSize: 20 , color:'red'}}>You write: {something}</Text>
+      <Button title="clear" onPress={()=>setSomething()}></Button>
+
+      {/* Basic Form */}
 
     </View>
   )
