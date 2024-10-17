@@ -1,5 +1,5 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import MyFatherComponent from './components/MyFatherComponent';
 
 const App = () => {
@@ -9,12 +9,19 @@ const App = () => {
   function name() {
     return "Haider Mukhtar";
   }
+
   function btn1() {
     console.warn("Hello u press a button")
   }
   function btn2(value) {
     console.warn("Hello " + value)
   }
+
+  const [fname, setFname] = useState("Hadier");
+  function updateName() {
+    setFname("Mukhtar")
+  }
+
   return (
     <View>
 
@@ -37,6 +44,10 @@ const App = () => {
       <Button title="Press me" onPress={btn1}></Button>
       <Text style={{ fontSize: 20 }}>if u want to pass some parameter by funtion on btn press, u have to use arrow function ()=>function(parameter)</Text>
       <Button title="Press me" onPress={() => btn2("Haider")}></Button>
+
+      {/* state */}
+      <Text style={{ fontSize: 20 , color:'black'}}>My Name is {fname}.</Text>
+      <Button title="Update Name" onPress={updateName}></Button>
 
     </View>
   )
