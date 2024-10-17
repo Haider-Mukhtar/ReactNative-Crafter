@@ -1,5 +1,5 @@
 import { Button, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import MyFatherComponent from './components/MyFatherComponent';
 
 const App = () => {
@@ -10,6 +10,7 @@ const App = () => {
     return "Haider Mukhtar";
   }
 
+  // Button & onpress event
   function btn1() {
     console.warn("Hello u press a button")
   }
@@ -17,6 +18,7 @@ const App = () => {
     console.warn("Hello " + value)
   }
 
+  // state 
   const [fname, setFname] = useState("Hadier");
   function updateName() {
     setFname("Mukhtar")
@@ -53,6 +55,7 @@ const App = () => {
   )
 }
 
+// Components
 const MyComponent = () => {
   return (
     <View>
@@ -65,13 +68,21 @@ const MyComponent = () => {
 const MyFriendComponent = () => {
   return (
     <View>
-      <Text style={{ fontSize: 26, color: 'green' }}>Friend Name: Ali</Text>
-      <Text style={{ fontSize: 26, color: 'green' }}>Friend Age: 22</Text>
-      <Text style={{ fontSize: 26, color: 'green' }}>Friend Email: friendr@gmail.com</Text>
+      <Text style={styles.compText}>Friend Name: Ali</Text>
+      <Text style={styles.compText}>Friend Age: 22</Text>
+      <Text style={styles.compText}>Friend Email: friendr@gmail.com</Text>
     </View>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  compText:{
+    fontSize: 26,
+    color: 'green',
+    backgroundColor: 'pink',
+    padding: 5,
+    textAlign:'center'
+  }
+})
