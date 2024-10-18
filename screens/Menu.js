@@ -36,6 +36,16 @@ const Menu = () => {
           Basic Form
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('FlatListComp')}>
+        <Text style={styles.txt}>
+          FlatList Comp
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('MapFunction')}>
+        <Text style={styles.txt}>
+          Map Function
+        </Text>
+      </TouchableOpacity>
     </View>
   )
 }

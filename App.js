@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -11,6 +11,8 @@ import Components from './screens/Components';
 import States from './screens/States';
 import TextInputComp from './screens/TextInputComp';
 import BasicForm from './screens/BasicForm';
+import FlatListComp from './screens/FlatListComp';
+import MapFunction from './screens/MapFunction';
 
 const App = () => {
 
@@ -27,6 +29,8 @@ const App = () => {
         <Stack.Screen name="States" component={States} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
         <Stack.Screen name="TextInputComp" component={TextInputComp} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
         <Stack.Screen name="BasicForm" component={BasicForm} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
+        <Stack.Screen name="FlatListComp" component={FlatListComp} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
+        <Stack.Screen name="MapFunction" component={MapFunction} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
