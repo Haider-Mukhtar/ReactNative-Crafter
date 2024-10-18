@@ -13,7 +13,7 @@ const Menu = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('ButtonComp')}>
         <Text style={styles.txt}>
-          ButtonComp
+          Button Comp
         </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Components')}>
@@ -28,7 +28,12 @@ const Menu = () => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('TextInputComp')}>
         <Text style={styles.txt}>
-          TextInputComp
+          TextInput Comp
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('BasicForm')}>
+        <Text style={styles.txt}>
+          Basic Form
         </Text>
       </TouchableOpacity>
     </View>

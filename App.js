@@ -10,6 +10,7 @@ import ButtonComp from './screens/ButtonComp';
 import Components from './screens/Components';
 import States from './screens/States';
 import TextInputComp from './screens/TextInputComp';
+import BasicForm from './screens/BasicForm';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Stack.Screen name="Components" component={Components} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
         <Stack.Screen name="States" component={States} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
         <Stack.Screen name="TextInputComp" component={TextInputComp} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
+        <Stack.Screen name="BasicForm" component={BasicForm} options={{ headerStyle: { backgroundColor: '#007bff', }, headerTintColor: '#fff', }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
